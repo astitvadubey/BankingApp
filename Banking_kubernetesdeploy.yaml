@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: FinanceMe_Banking-eta-container
-        image: astitva911/FinanceMe_Banking
+        image: astitva911/financeme_banking
         ports:
         - containerPort: 8082
 ---
