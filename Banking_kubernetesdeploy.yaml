@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: FinanceMe_Banking-eta-deploy
+  name: financeme_banking-eta-deploy
   labels:
-    app: FinanceMe_Banking-eta-app
+    app: financeme_banking-eta-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: FinanceMe_Banking-eta-app
+      app: financeme_banking-eta-app
   template:
     metadata:
       labels:
-        app: FinanceMe_Banking-eta-app
+        app: financeme_banking-eta-app
     spec:
       containers:
-      - name: FinanceMe_Banking-eta-container
+      - name: financeme_banking-eta-container
         image: astitva911/financeme_banking
         ports:
         - containerPort: 8082
@@ -23,12 +23,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: FinanceMe_Banking-eta-np-service
+  name: financeme_banking-eta-np-service
   labels:
-    app: FinanceMe_Banking-eta-app
+    app: financeme_banking-eta-app
 spec:
   selector:
-    app: FinanceMe_Banking-eta-app
+    app: financeme_banking-eta-app
 
   type: NodePort
   ports:
